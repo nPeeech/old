@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>連打速度計</title>
+</head>
+<body>
+    <h1 id="btn">ここをクリック！！</h1>
+    <script>
+        let btn = document.getElementById("btn");
+        let log;
+        let now = (new Date).getTime();
+        let last = (new Date).getTime();
+        btn.onclick = function(){
+            now = (new Date).getTime();
+            //console.log(now);
+            log = now - last;
+            log = log / 1000;
+            par_second = 1 / log
+            btn.innerHTML = "あなたのクリックの間隔は["+ log + "]秒であり、<br> [" + par_second + "] click/secondです。";
+            //console.log("あなたのクリックの間隔は"+ log + "秒です。");
+            last = now;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+These are output/output`s copy-images.
